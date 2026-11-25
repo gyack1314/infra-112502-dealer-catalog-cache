@@ -1,0 +1,13 @@
+{"at":0,"kind":"publish","record":{"key":"fit","revision":1,"values":{"fork":"X"}}}
+{"at":1,"kind":"lookup","record":{"store":"remote","id":"initial","mode":"promise","keys":["fit"],"item":"fork"}}
+{"at":2,"kind":"origin","record":{"store":"remote","request":"initial","key":"fit","revision":1,"issued_at":1,"values":{"fork":"X"}}}
+{"at":3,"kind":"link","record":{"store":"remote","region":"main","online":false}}
+{"at":4,"kind":"invalidation_head","record":{"number":1}}
+{"at":4,"kind":"invalidate","record":{"key":"fit","item":"fork","boundary":2,"reason":"withdrawn","number":1}}
+{"at":5,"kind":"restart","record":{"store":"remote"}}
+{"at":6,"kind":"lookup","record":{"store":"remote","id":"continue","mode":"promise","keys":["fit"],"item":"fork","floor":{"fit":1}}}
+{"at":7,"kind":"link","record":{"store":"remote","region":"main","online":true,"cursor":1}}
+{"at":8,"kind":"origin","record":{"store":"remote","request":"continue","key":"fit","revision":1,"issued_at":6,"values":{"fork":"X"}}}
+{"at":9,"kind":"inspect","record":{"store":"remote","id":"continue"}}
+{"at":10,"kind":"publish","record":{"key":"fit","revision":3,"values":{"fork":"Y"}}}
+{"at":11,"kind":"origin","record":{"store":"remote","request":"continue","key":"fit","revision":3,"issued_at":7,"values":{"fork":"Y"}}}

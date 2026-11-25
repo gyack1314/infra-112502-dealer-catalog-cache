@@ -1,0 +1,14 @@
+{"at":0,"kind":"publish","record":{"key":"base","revision":3,"values":{"model":"H"}}}
+{"at":0,"kind":"publish","record":{"key":"fit","revision":2,"values":{"bucket":"H"},"requires":{"base":3}}}
+{"at":1,"kind":"lookup","record":{"store":"north","id":"view","mode":"browse","keys":["fit"],"item":"bucket","stale_for":30}}
+{"at":2,"kind":"lookup","record":{"store":"north","id":"old","mode":"promise","keys":["fit"],"item":"bucket","floor":{"fit":2,"base":3}}}
+{"at":3,"kind":"publish","record":{"key":"fit","revision":4,"values":{"bucket":"HX"},"requires":{"base":5}}}
+{"at":4,"kind":"lookup","record":{"store":"north","id":"strict","mode":"promise","keys":["fit"],"item":"bucket","floor":{"fit":4,"base":5}}}
+{"at":5,"kind":"origin","record":{"store":"north","request":"view","key":"fit","revision":2,"issued_at":1,"values":{"bucket":"H"},"requires":{"base":3}}}
+{"at":6,"kind":"origin","record":{"store":"north","request":"view","key":"base","revision":3,"issued_at":5,"values":{"model":"H"}}}
+{"at":7,"kind":"origin","record":{"store":"north","request":"strict","key":"fit","revision":4,"issued_at":4,"values":{"bucket":"HX"},"requires":{"base":5}}}
+{"at":8,"kind":"inspect","record":{"store":"north","id":"strict"}}
+{"at":9,"kind":"publish","record":{"key":"base","revision":5,"values":{"model":"HX"}}}
+{"at":10,"kind":"origin","record":{"store":"north","request":"strict","key":"base","revision":5,"issued_at":7,"values":{"model":"HX"}}}
+{"at":11,"kind":"lookup","record":{"store":"south","id":"cross-store","mode":"promise","keys":["fit"],"item":"bucket","floor":{"fit":4,"base":5}}}
+{"at":12,"kind":"inspect","record":{"store":"south"}}
